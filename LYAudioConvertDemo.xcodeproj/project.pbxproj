@@ -148,7 +148,7 @@
 		A77AF97721A66345002D8537 /* LYAudioConvertDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A77AFA0321A68A1D002D8537 /* LYAudioManager */,
+				A77AFA0321A68A1D002D8537 /* LYAudioDevice */,
 				A77AF98E21A664DA002D8537 /* LYAudioConvert */,
 				A77AF97821A66345002D8537 /* AppDelegate.h */,
 				A77AF97921A66345002D8537 /* AppDelegate.m */,
@@ -328,7 +328,7 @@
 			path = Decode;
 			sourceTree = "<group>";
 		};
-		A77AFA0321A68A1D002D8537 /* LYAudioManager */ = {
+		A77AFA0321A68A1D002D8537 /* LYAudioDevice */ = {
 			isa = PBXGroup;
 			children = (
 				A77AFA0421A68A1D002D8537 /* LYAudioManager.h */,
@@ -338,7 +338,7 @@
 				A77AFA0621A68A1D002D8537 /* LYAudioRecorderUtil.h */,
 				A77AFA0921A68A1D002D8537 /* LYAudioRecorderUtil.m */,
 			);
-			path = LYAudioManager;
+			path = LYAudioDevice;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
