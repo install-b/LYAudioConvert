@@ -10,74 +10,68 @@ Pod::Spec.new do |s|
 
   s.name         = "LYAudioManager"
   s.version      = "1.0.0"
-  s.summary      = "A short description of LYAudioManager."
+  s.summary      = "audio recoder,player and convert tool"
 
   s.description  = <<-DESC
+                  a simple audio recoder,player and convert tool for iOS
                    DESC
 
   s.homepage     = "https://github.com/install-b/LYAudioConvert"
 
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
 
   s.author       = { "Shangen Zhang" => "gkzhangshangen@163.com" }
 
   s.platform     = :ios, "8.0"
 
-
-  s.source       = { :git => "https://github.com/install-b/LYAudioConvert.git", :tag => "#{s.version}" }
-
-
-  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
-  #  For header files it will include any header in the folder.
-  #  Not including the public_header_files will make all headers public.
-  #
-
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
-
-  # s.public_header_files = "Classes/**/*.h"
+  s.source       = { :git => "https://github.com/install-b/LYAudioConvert.git", :tag => s.version }
+ 
 
 
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
+# sub spec  AudioDevice
+  s.subspec 'AudioDevice' do |d|
+    
+    d.framework = "AVFoundation"
+    d.source_files = 'LYAudioDevice/*.{h,m}'
+    d.public_header_files = 'LYAudioDevice/*.h'
 
-  # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  end
 
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
+#  sub spec  AudioConvert
+  s.subspec 'AudioConvert' do |c|
+    
+    # Convert
+    c.subspec 'Convert' do |con|
+      con.source_files = 'LYAudioConvert/AudioConvert/**/*.{h,mm}'
+      con.dependency 'LYAudioManager/AudioConvert/Code'
+      con.dependency 'LYAudioManager/AudioConvert/SoundTouch'
+    end
+
+     # Code
+    c.subspec 'Code' do |cod|
+
+      cod.source_files = 'LYAudioConvert/AudioEncode/**/*.{h,m,mm,cpp,a}'
+
+      cod.vendored_libraries = "LYAudioConvert/AudioEncode/**/*.a"
+
+      cod.frameworks = "CoreAudio", "CoreFoundation", "UIKit"
+    end
+
+     #  SoundTouch
+    c.subspec 'SoundTouch' do |sou|
+
+      sou.source_files = 'LYAudioConvert/AudioSoundTouch/**/*.{h,mm,cpp}'
+      sou.dependency 'LYAudioManager/AudioConvert/Code'
+    end
 
 
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
+    # c.framework = "Foundation"
+    # c.source_files = 'LYAudioConvert/*.{h,m}'
 
-  # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+   end
 
-  # s.library   = "iconv"
-  # s.libraries = "iconv", "xml2"
+  #s.requires_arc = true
 
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
-  # s.requires_arc = true
-
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
 
 end

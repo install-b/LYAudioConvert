@@ -19,35 +19,6 @@ static LYAudioPlayerUtil *audioPlayerUtil = nil;
 @end
 
 @implementation LYAudioPlayerUtil
-#pragma mark - public
-+ (BOOL)isPlaying{
-    return [[LYAudioPlayerUtil sharedInstance] isPlaying];
-}
-
-+ (NSString *)playingFilePath{
-    return [[LYAudioPlayerUtil sharedInstance] playingFilePath];
-}
-
-+ (void)asyncPlayingWithPath:(NSString *)aFilePath
-                  completion:(void(^)(NSError *error))completon{
-    [[LYAudioPlayerUtil sharedInstance] asyncPlayingWithPath:aFilePath
-                                                  completion:completon];
-}
-
-+ (void)stopCurrentPlaying{
-    [[LYAudioPlayerUtil sharedInstance] stopCurrentPlaying];
-}
-
-
-#pragma mark - private
-+ (LYAudioPlayerUtil *)sharedInstance{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        audioPlayerUtil = [[self alloc] init];
-    });
-    
-    return audioPlayerUtil;
-}
 
 // 当前是否正在播放
 - (BOOL)isPlaying

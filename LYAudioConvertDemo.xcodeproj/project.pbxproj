@@ -169,8 +169,6 @@
 				A77AF9B621A664DA002D8537 /* AudioConvert */,
 				A77AF9BD21A664DA002D8537 /* AudioSoundTouch */,
 				A77AF9C321A664DA002D8537 /* AudioEncode */,
-				A77AF9BA21A664DA002D8537 /* LYAudioConvertManager.h */,
-				A77AF9C221A664DA002D8537 /* LYAudioConvertManager.m */,
 			);
 			path = LYAudioConvert;
 			sourceTree = SOURCE_ROOT;
@@ -208,7 +206,8 @@
 		A77AF9B621A664DA002D8537 /* AudioConvert */ = {
 			isa = PBXGroup;
 			children = (
-				A77AF9B721A664DA002D8537 /* AudioDefine.h */,
+				A77AF9BA21A664DA002D8537 /* LYAudioConvertManager.h */,
+				A77AF9C221A664DA002D8537 /* LYAudioConvertManager.m */,
 				A77AF9B921A664DA002D8537 /* AudioConvert.h */,
 				A77AF9B821A664DA002D8537 /* AudioConvert.mm */,
 			);
@@ -230,6 +229,7 @@
 		A77AF9C321A664DA002D8537 /* AudioEncode */ = {
 			isa = PBXGroup;
 			children = (
+				A77AF9B721A664DA002D8537 /* AudioDefine.h */,
 				A77AF9F521A684B6002D8537 /* AudioDecode */,
 				A77AF9C421A664DA002D8537 /* AudioToMp3 */,
 				A77AF9CA21A664DA002D8537 /* AudioToAmr */,
@@ -333,8 +333,8 @@
 			children = (
 				A77AFA0421A68A1D002D8537 /* LYAudioManager.h */,
 				A77AFA0721A68A1D002D8537 /* LYAudioManager.m */,
-				A77AFA0521A68A1D002D8537 /* LYAudioPlayerUtil.m */,
 				A77AFA0821A68A1D002D8537 /* LYAudioPlayerUtil.h */,
+				A77AFA0521A68A1D002D8537 /* LYAudioPlayerUtil.m */,
 				A77AFA0621A68A1D002D8537 /* LYAudioRecorderUtil.h */,
 				A77AFA0921A68A1D002D8537 /* LYAudioRecorderUtil.m */,
 			);
