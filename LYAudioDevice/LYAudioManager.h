@@ -13,6 +13,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface LYAudioManager : NSObject
 
@@ -55,4 +56,6 @@
 // 当前是否正在录音
 -(BOOL)isRecording;
 
+// 当前录音器
+- (AVAudioRecorder *)currentAudioRecorder;
 @end

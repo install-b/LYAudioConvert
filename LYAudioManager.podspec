@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LYAudioManager"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "audio recoder,player and convert tool"
 
   s.description  = <<-DESC

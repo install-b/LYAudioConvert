@@ -233,6 +233,9 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
     [[self recorder] cancelCurrentRecording];
 }
 
+- (AVAudioRecorder *)currentAudioRecorder {
+    return _recorder.recorder;
+}
 -(BOOL)isRecording{
 // 获取录音状态
     return [[self recorder] isRecording];
