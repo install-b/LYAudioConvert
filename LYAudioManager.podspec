@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LYAudioManager"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "audio recoder,player and convert tool"
 
   s.description  = <<-DESC
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
     
     # Convert
     c.subspec 'Convert' do |con|
-      con.source_files = 'LYAudioConvert/AudioConvert/**/*.{h,mm}'
+      con.source_files = 'LYAudioConvert/AudioConvert/**/*.{h,mm,m}'
       con.dependency 'LYAudioManager/AudioConvert/Code'
       con.dependency 'LYAudioManager/AudioConvert/SoundTouch'
     end

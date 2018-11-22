@@ -30,8 +30,8 @@
 		A77AF9EE21A664DA002D8537 /* LYAudioConvertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9C221A664DA002D8537 /* LYAudioConvertManager.m */; };
 		A77AF9EF21A664DA002D8537 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AF9C621A664DA002D8537 /* libmp3lame.a */; };
 		A77AF9F021A664DA002D8537 /* AudioEncodeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9C921A664DA002D8537 /* AudioEncodeOperation.m */; };
-		A77AF9F121A664DA002D8537 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AF9CF21A664DA002D8537 /* libopencore-amrwb.a */; };
-		A77AF9F221A664DA002D8537 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AF9D021A664DA002D8537 /* libopencore-amrnb.a */; };
+		A77AF9F121A664DA002D8537 /* libopencore_amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AF9CF21A664DA002D8537 /* libopencore_amrwb.a */; };
+		A77AF9F221A664DA002D8537 /* libopencore_amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AF9D021A664DA002D8537 /* libopencore_amrnb.a */; };
 		A77AF9F321A664DA002D8537 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9D521A664DA002D8537 /* wav.mm */; };
 		A77AF9F421A664DA002D8537 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9D621A664DA002D8537 /* amrFileCodec.mm */; };
 		A77AF9FE21A684B6002D8537 /* AudioDecodeOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9F721A684B6002D8537 /* AudioDecodeOperation.mm */; };
@@ -91,8 +91,8 @@
 		A77AF9C921A664DA002D8537 /* AudioEncodeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioEncodeOperation.m; sourceTree = "<group>"; };
 		A77AF9CC21A664DA002D8537 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
 		A77AF9CD21A664DA002D8537 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		A77AF9CF21A664DA002D8537 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
-		A77AF9D021A664DA002D8537 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		A77AF9CF21A664DA002D8537 /* libopencore_amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencore_amrwb.a; sourceTree = "<group>"; };
+		A77AF9D021A664DA002D8537 /* libopencore_amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopencore_amrnb.a; sourceTree = "<group>"; };
 		A77AF9D221A664DA002D8537 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
 		A77AF9D321A664DA002D8537 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
 		A77AF9D521A664DA002D8537 /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A77AF9F121A664DA002D8537 /* libopencore-amrwb.a in Frameworks */,
-				A77AF9F221A664DA002D8537 /* libopencore-amrnb.a in Frameworks */,
+				A77AF9F121A664DA002D8537 /* libopencore_amrwb.a in Frameworks */,
+				A77AF9F221A664DA002D8537 /* libopencore_amrnb.a in Frameworks */,
 				A77AF9EF21A664DA002D8537 /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,8 +279,8 @@
 		A77AF9CE21A664DA002D8537 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				A77AF9CF21A664DA002D8537 /* libopencore-amrwb.a */,
-				A77AF9D021A664DA002D8537 /* libopencore-amrnb.a */,
+				A77AF9CF21A664DA002D8537 /* libopencore_amrwb.a */,
+				A77AF9D021A664DA002D8537 /* libopencore_amrnb.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
