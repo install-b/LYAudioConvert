@@ -1,9 +1,9 @@
 //
 //  AudioConvert.m
-//  SoundTouchDemo
+//  SoundTouch
 //
-//  Created by chuliangliang on 15-1-29.
-//  Copyright (c) 2015年 chuliangliang. All rights reserved.
+//  Created by Shangen Zhang on 2018/8/9.
+//  Copyright © 2018年 Flame. All rights reserved.
 //
 #import "AudioConvert.h"
 #import "amrFileCodec.h"

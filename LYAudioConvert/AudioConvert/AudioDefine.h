@@ -1,9 +1,9 @@
 //
 //  AudioDefine.h
-//  SoundTouchDemo
+//  SoundTouch
 //
-//  Created by chuliangliang on 15-2-10.
-//  Copyright (c) 2015年 chuliangliang. All rights reserved.
+//  Created by Shangen Zhang on 2018/8/9.
+//  Copyright © 2018年 Flame. All rights reserved.
 //
 
 #ifndef SoundTouchDemo_AudioDefine_h

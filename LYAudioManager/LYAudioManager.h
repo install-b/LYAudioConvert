@@ -1,9 +1,9 @@
 //
-//  LYCDDeviceManager.h
-//  TaiYangHua
+//  LYAudioManager.h
+//  LYAudioManager
 //
-//  Created by Lc on 16/1/25.
-//  Copyright © 2016年 hhly. All rights reserved.
+//  Created by Shangen Zhang on 2018/11/22.
+//  Copyright © 2018 Flame. All rights reserved.
 //
 
 /**

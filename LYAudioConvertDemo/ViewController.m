@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "LYAudioConvertManager.h"
+#import "LYAudioManager.h"
+
 
 @interface ViewController ()
 
@@ -16,7 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [LYAudioManager sharedInstance];
+    
+    [LYAudioConvertManager sharedInstance];
 }
 
 

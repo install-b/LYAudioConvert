@@ -1,9 +1,9 @@
 //
-//  LYCDDeviceManager.m
-//  TaiYangHua
+//  LYAudioManager.m
+//  LYAudioManager
 //
-//  Created by Lc on 16/1/25.
-//  Copyright © 2016年 hhly. All rights reserved.
+//  Created by Shangen Zhang on 2018/11/22.
+//  Copyright © 2018 Flame. All rights reserved.
 //
 
 #import "LYAudioManager.h"
@@ -26,6 +26,12 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
     BOOL                _currActive;
     
 }
+
+/* 播放器 */
+@property (nonatomic,strong) LYAudioPlayerUtil * player;
+
+/* 录音器 */
+@property (nonatomic,strong) LYAudioRecorderUtil * recorder;
 @end
 
 @implementation LYAudioManager
@@ -38,6 +44,19 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
     });
     
     return _CDDeviceManager;
+}
+
+- (LYAudioPlayerUtil *)player {
+    if (!_player) {
+        _player = [[LYAudioPlayerUtil alloc] init];
+    }
+    return _player;
+}
+- (LYAudioRecorderUtil *)recorder {
+    if (!_recorder) {
+        _recorder = [[LYAudioRecorderUtil alloc] init];
+    }
+    return _recorder;
 }
 
 /** 检查语音权限 */
@@ -63,8 +82,9 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
                   completion:(void(^)(NSError *error))completon{
     BOOL isNeedSetActive = YES;
     // 如果正在播放音频，停止当前播放。
-    if([LYAudioPlayerUtil isPlaying]){
-        [LYAudioPlayerUtil stopCurrentPlaying];
+    LYAudioPlayerUtil *player = [self player];
+    if([player isPlaying]){
+        [player stopCurrentPlaying];
         isNeedSetActive = NO;
     }
     
@@ -76,8 +96,8 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
     
     NSString *mp3FilePath = [[aFilePath stringByDeletingPathExtension] stringByAppendingPathExtension:@"mp3"];
 
-    [LYAudioPlayerUtil asyncPlayingWithPath:mp3FilePath
-                                 completion:^(NSError *error)
+    [player asyncPlayingWithPath:mp3FilePath
+                      completion:^(NSError *error)
      {
          [self setupAudioSessionCategory:LY_DEFAULT
                                 isActive:NO];
@@ -89,13 +109,13 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
 
 // 停止播放
 - (void)stopPlaying{
-    [LYAudioPlayerUtil stopCurrentPlaying];
+    [[self player] stopCurrentPlaying];
     [self setupAudioSessionCategory:LY_DEFAULT
                            isActive:NO];
 }
 
 - (void)stopPlayingWithChangeCategory:(BOOL)isChange{
-    [LYAudioPlayerUtil stopCurrentPlaying];
+    [[self player] stopCurrentPlaying];
     if (isChange) {
         [self setupAudioSessionCategory:LY_DEFAULT
                                isActive:NO];
@@ -104,7 +124,7 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
 
 // 获取播放状态
 - (BOOL)isPlaying{
-    return [LYAudioPlayerUtil isPlaying];
+    return [[self player] isPlaying];
 }
 
 #pragma mark - Recorder
@@ -138,8 +158,9 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
         return ;
     }
     
+    LYAudioRecorderUtil *recoder = [self recorder];
     if ([self isRecording]) {
-        [LYAudioRecorderUtil cancelCurrentRecording];
+        [recoder cancelCurrentRecording];
     }
     
     [self setupAudioSessionCategory:LY_AUDIORECORDER
@@ -158,8 +179,8 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
                             error:nil];
     }
     
-    [LYAudioRecorderUtil asyncStartRecordingWithPreparePath:recordPath
-                                                 completion:completion];
+    [recoder asyncStartRecordingWithPreparePath:recordPath
+                                     completion:completion];
 }
 
 // 停止录音
@@ -181,6 +202,8 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
     __weak typeof(self) weakSelf = self;
     _recorderEndDate = [NSDate date];
     
+    LYAudioRecorderUtil *recoder = [self recorder];
+    
     if([_recorderEndDate timeIntervalSinceDate:_recorderStartDate] < [LYAudioManager recordMinDuration]){
         if (completion) {
             error = [NSError errorWithDomain:NSLocalizedString(@"error.recordTooShort", @"Recording time is too short")
@@ -189,13 +212,13 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
             completion(nil,0,error);
         }
         
-        [LYAudioRecorderUtil asyncStopRecordingWithCompletion:^(NSString *recordPath) {
+        [recoder asyncStopRecordingWithCompletion:^(NSString *recordPath) {
             [weakSelf setupAudioSessionCategory:LY_DEFAULT isActive:NO];
         }];
         return ;
     }
     
-    [LYAudioRecorderUtil asyncStopRecordingWithCompletion:^(NSString *recordPath) {
+    [recoder asyncStopRecordingWithCompletion:^(NSString *recordPath) {
         if (completion) {
             if (recordPath) {
                 completion(recordPath,(int)[self->_recorderEndDate timeIntervalSinceDate:self->_recorderStartDate],nil);
@@ -207,12 +230,12 @@ typedef NS_ENUM(NSInteger, LYAudioSession){
 
 // 取消录音
 -(void)cancelCurrentRecording{
-    [LYAudioRecorderUtil cancelCurrentRecording];
+    [[self recorder] cancelCurrentRecording];
 }
 
 -(BOOL)isRecording{
 // 获取录音状态
-    return [LYAudioRecorderUtil isRecording];
+    return [[self recorder] isRecording];
 }
 
 #pragma mark - Private

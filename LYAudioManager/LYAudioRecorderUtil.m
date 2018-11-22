@@ -1,9 +1,9 @@
 //
 //  LYAudioRecorderUtil.m
-//  LYLink
+//  LYAudioManager
 //
-//  Created by Lc on 16/1/25.
-//  Copyright © 2016年 hhly. All rights reserved.
+//  Created by Shangen Zhang on 2018/11/22.
+//  Copyright © 2018 Flame. All rights reserved.
 //
 
 #import "LYAudioRecorderUtil.h"
@@ -23,32 +23,6 @@ static LYAudioRecorderUtil *audioRecorderUtil = nil;
 
 @implementation LYAudioRecorderUtil
 
-#pragma mark - Public
-// 当前是否正在录音
-+(BOOL)isRecording{
-    return [[LYAudioRecorderUtil sharedInstance] isRecording];
-}
-
-// 开始录音
-+ (void)asyncStartRecordingWithPreparePath:(NSString *)aFilePath
-                                completion:(void(^)(NSError *error))completion{
-    [[LYAudioRecorderUtil sharedInstance] asyncStartRecordingWithPreparePath:aFilePath
-                                                                  completion:completion];
-}
-
-// 停止录音
-+(void)asyncStopRecordingWithCompletion:(void(^)(NSString *recordPath))completion{
-    [[LYAudioRecorderUtil sharedInstance] asyncStopRecordingWithCompletion:completion];
-}
-
-// 取消录音
-+(void)cancelCurrentRecording{
-    [[LYAudioRecorderUtil sharedInstance] cancelCurrentRecording];
-}
-
-+(AVAudioRecorder *)recorder{
-    return [LYAudioRecorderUtil sharedInstance].recorder;
-}
 
 #pragma mark - getter
 - (NSDictionary *)recordSetting
@@ -64,16 +38,6 @@ static LYAudioRecorderUtil *audioRecorderUtil = nil;
     }
     
     return _recordSetting;
-}
-
-#pragma mark - Private
-+(LYAudioRecorderUtil *)sharedInstance{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        audioRecorderUtil = [[self alloc] init];
-    });
-    
-    return audioRecorderUtil;
 }
 
 -(instancetype)init{

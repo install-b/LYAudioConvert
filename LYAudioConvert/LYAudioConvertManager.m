@@ -1,6 +1,6 @@
 //
-//  LYSoundTouchConvertModel.m
-//  CFAudioConvert
+//  LYSoundTouchConvertManager.m
+//  LYAudioConvert
 //
 //  Created by Shangen Zhang on 2018/8/9.
 //  Copyright © 2018年 Flame. All rights reserved.

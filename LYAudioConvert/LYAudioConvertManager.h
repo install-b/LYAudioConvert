@@ -1,16 +1,11 @@
 //
-//  LYSoundTouchConvertModel.h
-//  CFAudioConvert
+//  LYSoundTouchConvertManager.h
+//  LYAudioConvert
 //
 //  Created by Shangen Zhang on 2018/8/9.
 //  Copyright © 2018年 Flame. All rights reserved.
 //
 
-
-/**
- *  音频 转化管理器
- *
- */
 
 #import <Foundation/Foundation.h>
 
@@ -28,6 +23,7 @@
 /* 声音速率 范围 -50 ~ 100 */
 @property (nonatomic,assign) NSInteger rateChange;
 
+// 构造 soundtouch
 - (instancetype)initWithTempoChange:(NSInteger)tempoChange
                      pitchSemiTones:(NSInteger)pitchSemiTones
                          rateChange:(NSInteger)rateChange;
@@ -35,6 +31,11 @@
 @end
 
 
+
+/**
+ *  音频 转化管理器
+ *
+ */
 @interface LYAudioConvertManager : NSObject
 
 
@@ -61,4 +62,6 @@
  @return mp3 格式音频
  */
 - (NSString *)convertToMP3WithWAV:(NSString *)WAVPath;
+
+
 @end
