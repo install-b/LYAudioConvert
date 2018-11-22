@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A77AF97A21A66345002D8537 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF97921A66345002D8537 /* AppDelegate.m */; };
+		A77AF97D21A66345002D8537 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF97C21A66345002D8537 /* ViewController.m */; };
+		A77AF98021A66345002D8537 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77AF97E21A66345002D8537 /* Main.storyboard */; };
+		A77AF98221A66347002D8537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A77AF98121A66347002D8537 /* Assets.xcassets */; };
+		A77AF98521A66347002D8537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77AF98321A66347002D8537 /* LaunchScreen.storyboard */; };
+		A77AF98821A66347002D8537 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF98721A66347002D8537 /* main.m */; };
+		A77AF9DA21A664DA002D8537 /* TDStretch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF99021A664DA002D8537 /* TDStretch.cpp */; };
+		A77AF9DB21A664DA002D8537 /* RateTransposer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF99221A664DA002D8537 /* RateTransposer.cpp */; };
+		A77AF9DC21A664DA002D8537 /* BPMDetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF99521A664DA002D8537 /* BPMDetect.cpp */; };
+		A77AF9DD21A664DA002D8537 /* mmx_optimized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF99721A664DA002D8537 /* mmx_optimized.cpp */; };
+		A77AF9DE21A664DA002D8537 /* FIRFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF99921A664DA002D8537 /* FIRFilter.cpp */; };
+		A77AF9DF21A664DA002D8537 /* FIFOSampleBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF99D21A664DA002D8537 /* FIFOSampleBuffer.cpp */; };
+		A77AF9E021A664DA002D8537 /* sse_optimized.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF99E21A664DA002D8537 /* sse_optimized.cpp */; };
+		A77AF9E121A664DA002D8537 /* cpu_detect_x86.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9A021A664DA002D8537 /* cpu_detect_x86.cpp */; };
+		A77AF9E221A664DA002D8537 /* PeakFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9A221A664DA002D8537 /* PeakFinder.cpp */; };
+		A77AF9E321A664DA002D8537 /* AAFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9A521A664DA002D8537 /* AAFilter.cpp */; };
+		A77AF9E421A664DA002D8537 /* SoundTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9A621A664DA002D8537 /* SoundTouch.cpp */; };
+		A77AF9E521A664DA002D8537 /* AudioDecodeOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9AA21A664DA002D8537 /* AudioDecodeOperation.mm */; };
+		A77AF9E621A664DA002D8537 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9AC21A664DA002D8537 /* CAXException.cpp */; };
+		A77AF9E721A664DA002D8537 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9AF21A664DA002D8537 /* CAStreamBasicDescription.cpp */; };
+		A77AF9E821A664DA002D8537 /* LYAudioRecorderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9B221A664DA002D8537 /* LYAudioRecorderUtil.m */; };
+		A77AF9E921A664DA002D8537 /* LYAudioPlayerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9B421A664DA002D8537 /* LYAudioPlayerUtil.m */; };
+		A77AF9EA21A664DA002D8537 /* AudioConvert.mm in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9B821A664DA002D8537 /* AudioConvert.mm */; };
+		A77AF9EB21A664DA002D8537 /* LYAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9BB21A664DA002D8537 /* LYAudioManager.m */; };
+		A77AF9EC21A664DA002D8537 /* AudioSoundTouchOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9BF21A664DA002D8537 /* AudioSoundTouchOperation.mm */; };
+		A77AF9ED21A664DA002D8537 /* WaveHeader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9C121A664DA002D8537 /* WaveHeader.cpp */; };
+		A77AF9EE21A664DA002D8537 /* LYAudioConvertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9C221A664DA002D8537 /* LYAudioConvertManager.m */; };
+		A77AF9EF21A664DA002D8537 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AF9C621A664DA002D8537 /* libmp3lame.a */; };
+		A77AF9F021A664DA002D8537 /* AudioEncodeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9C921A664DA002D8537 /* AudioEncodeOperation.m */; };
+		A77AF9F121A664DA002D8537 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AF9CF21A664DA002D8537 /* libopencore-amrwb.a */; };
+		A77AF9F221A664DA002D8537 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A77AF9D021A664DA002D8537 /* libopencore-amrnb.a */; };
+		A77AF9F321A664DA002D8537 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9D521A664DA002D8537 /* wav.mm */; };
+		A77AF9F421A664DA002D8537 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = A77AF9D621A664DA002D8537 /* amrFileCodec.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A77AF97521A66345002D8537 /* LYAudioConvertDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYAudioConvertDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A77AF97821A66345002D8537 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A77AF97921A66345002D8537 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A77AF97B21A66345002D8537 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A77AF97C21A66345002D8537 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A77AF97F21A66345002D8537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A77AF98121A66347002D8537 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A77AF98421A66347002D8537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A77AF98621A66347002D8537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A77AF98721A66347002D8537 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A77AF99021A664DA002D8537 /* TDStretch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TDStretch.cpp; sourceTree = "<group>"; };
+		A77AF99121A664DA002D8537 /* FIFOSampleBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOSampleBuffer.h; sourceTree = "<group>"; };
+		A77AF99221A664DA002D8537 /* RateTransposer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RateTransposer.cpp; sourceTree = "<group>"; };
+		A77AF99321A664DA002D8537 /* FIRFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIRFilter.h; sourceTree = "<group>"; };
+		A77AF99421A664DA002D8537 /* STTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTypes.h; sourceTree = "<group>"; };
+		A77AF99521A664DA002D8537 /* BPMDetect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BPMDetect.cpp; sourceTree = "<group>"; };
+		A77AF99621A664DA002D8537 /* BPMDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPMDetect.h; sourceTree = "<group>"; };
+		A77AF99721A664DA002D8537 /* mmx_optimized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mmx_optimized.cpp; sourceTree = "<group>"; };
+		A77AF99821A664DA002D8537 /* PeakFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeakFinder.h; sourceTree = "<group>"; };
+		A77AF99921A664DA002D8537 /* FIRFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIRFilter.cpp; sourceTree = "<group>"; };
+		A77AF99A21A664DA002D8537 /* SoundTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTouch.h; sourceTree = "<group>"; };
+		A77AF99B21A664DA002D8537 /* soundtouch_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = soundtouch_config.h; sourceTree = "<group>"; };
+		A77AF99C21A664DA002D8537 /* FIFOSamplePipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FIFOSamplePipe.h; sourceTree = "<group>"; };
+		A77AF99D21A664DA002D8537 /* FIFOSampleBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FIFOSampleBuffer.cpp; sourceTree = "<group>"; };
+		A77AF99E21A664DA002D8537 /* sse_optimized.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sse_optimized.cpp; sourceTree = "<group>"; };
+		A77AF99F21A664DA002D8537 /* AAFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAFilter.h; sourceTree = "<group>"; };
+		A77AF9A021A664DA002D8537 /* cpu_detect_x86.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpu_detect_x86.cpp; sourceTree = "<group>"; };
+		A77AF9A121A664DA002D8537 /* RateTransposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateTransposer.h; sourceTree = "<group>"; };
+		A77AF9A221A664DA002D8537 /* PeakFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PeakFinder.cpp; sourceTree = "<group>"; };
+		A77AF9A321A664DA002D8537 /* TDStretch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDStretch.h; sourceTree = "<group>"; };
+		A77AF9A421A664DA002D8537 /* cpu_detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_detect.h; sourceTree = "<group>"; };
+		A77AF9A521A664DA002D8537 /* AAFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AAFilter.cpp; sourceTree = "<group>"; };
+		A77AF9A621A664DA002D8537 /* SoundTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundTouch.cpp; sourceTree = "<group>"; };
+		A77AF9A921A664DA002D8537 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		A77AF9AA21A664DA002D8537 /* AudioDecodeOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioDecodeOperation.mm; sourceTree = "<group>"; };
+		A77AF9AB21A664DA002D8537 /* AudioDecodeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDecodeOperation.h; sourceTree = "<group>"; };
+		A77AF9AC21A664DA002D8537 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		A77AF9AD21A664DA002D8537 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		A77AF9AE21A664DA002D8537 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		A77AF9AF21A664DA002D8537 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		A77AF9B021A664DA002D8537 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		A77AF9B121A664DA002D8537 /* LYAudioRecorderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAudioRecorderUtil.h; sourceTree = "<group>"; };
+		A77AF9B221A664DA002D8537 /* LYAudioRecorderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAudioRecorderUtil.m; sourceTree = "<group>"; };
+		A77AF9B421A664DA002D8537 /* LYAudioPlayerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAudioPlayerUtil.m; sourceTree = "<group>"; };
+		A77AF9B521A664DA002D8537 /* LYAudioPlayerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAudioPlayerUtil.h; sourceTree = "<group>"; };
+		A77AF9B721A664DA002D8537 /* AudioDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioDefine.h; sourceTree = "<group>"; };
+		A77AF9B821A664DA002D8537 /* AudioConvert.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioConvert.mm; sourceTree = "<group>"; };
+		A77AF9B921A664DA002D8537 /* AudioConvert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioConvert.h; sourceTree = "<group>"; };
+		A77AF9BA21A664DA002D8537 /* LYAudioConvertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAudioConvertManager.h; sourceTree = "<group>"; };
+		A77AF9BB21A664DA002D8537 /* LYAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAudioManager.m; sourceTree = "<group>"; };
+		A77AF9BC21A664DA002D8537 /* LYAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAudioManager.h; sourceTree = "<group>"; };
+		A77AF9BE21A664DA002D8537 /* AudioSoundTouchOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioSoundTouchOperation.h; sourceTree = "<group>"; };
+		A77AF9BF21A664DA002D8537 /* AudioSoundTouchOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioSoundTouchOperation.mm; sourceTree = "<group>"; };
+		A77AF9C021A664DA002D8537 /* WaveHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveHeader.h; sourceTree = "<group>"; };
+		A77AF9C121A664DA002D8537 /* WaveHeader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WaveHeader.cpp; sourceTree = "<group>"; };
+		A77AF9C221A664DA002D8537 /* LYAudioConvertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAudioConvertManager.m; sourceTree = "<group>"; };
+		A77AF9C621A664DA002D8537 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		A77AF9C721A664DA002D8537 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		A77AF9C821A664DA002D8537 /* AudioEncodeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEncodeOperation.h; sourceTree = "<group>"; };
+		A77AF9C921A664DA002D8537 /* AudioEncodeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioEncodeOperation.m; sourceTree = "<group>"; };
+		A77AF9CC21A664DA002D8537 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
+		A77AF9CD21A664DA002D8537 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
+		A77AF9CF21A664DA002D8537 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
+		A77AF9D021A664DA002D8537 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		A77AF9D221A664DA002D8537 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
+		A77AF9D321A664DA002D8537 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
+		A77AF9D521A664DA002D8537 /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
+		A77AF9D621A664DA002D8537 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
+		A77AF9D721A664DA002D8537 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
+		A77AF9D821A664DA002D8537 /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A77AF97221A66345002D8537 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A77AF9F121A664DA002D8537 /* libopencore-amrwb.a in Frameworks */,
+				A77AF9F221A664DA002D8537 /* libopencore-amrnb.a in Frameworks */,
+				A77AF9EF21A664DA002D8537 /* libmp3lame.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A77AF96C21A66345002D8537 = {
+			isa = PBXGroup;
+			children = (
+				A77AF97721A66345002D8537 /* LYAudioConvertDemo */,
+				A77AF97621A66345002D8537 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A77AF97621A66345002D8537 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF97521A66345002D8537 /* LYAudioConvertDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A77AF97721A66345002D8537 /* LYAudioConvertDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF98E21A664DA002D8537 /* LYAudioConvert */,
+				A77AF97821A66345002D8537 /* AppDelegate.h */,
+				A77AF97921A66345002D8537 /* AppDelegate.m */,
+				A77AF97B21A66345002D8537 /* ViewController.h */,
+				A77AF97C21A66345002D8537 /* ViewController.m */,
+				A77AF97E21A66345002D8537 /* Main.storyboard */,
+				A77AF98121A66347002D8537 /* Assets.xcassets */,
+				A77AF98321A66347002D8537 /* LaunchScreen.storyboard */,
+				A77AF98621A66347002D8537 /* Info.plist */,
+				A77AF98721A66347002D8537 /* main.m */,
+			);
+			path = LYAudioConvertDemo;
+			sourceTree = "<group>";
+		};
+		A77AF98E21A664DA002D8537 /* LYAudioConvert */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF98F21A664DA002D8537 /* SoundTouch */,
+				A77AF9A721A664DA002D8537 /* Record */,
+				A77AF9B321A664DA002D8537 /* AudioPlayer */,
+				A77AF9B621A664DA002D8537 /* AudioConvert */,
+				A77AF9BD21A664DA002D8537 /* AudioSoundTouch */,
+				A77AF9C321A664DA002D8537 /* AudioEncode */,
+				A77AF9BC21A664DA002D8537 /* LYAudioManager.h */,
+				A77AF9BB21A664DA002D8537 /* LYAudioManager.m */,
+				A77AF9BA21A664DA002D8537 /* LYAudioConvertManager.h */,
+				A77AF9C221A664DA002D8537 /* LYAudioConvertManager.m */,
+			);
+			path = LYAudioConvert;
+			sourceTree = SOURCE_ROOT;
+		};
+		A77AF98F21A664DA002D8537 /* SoundTouch */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF99021A664DA002D8537 /* TDStretch.cpp */,
+				A77AF99121A664DA002D8537 /* FIFOSampleBuffer.h */,
+				A77AF99221A664DA002D8537 /* RateTransposer.cpp */,
+				A77AF99321A664DA002D8537 /* FIRFilter.h */,
+				A77AF99421A664DA002D8537 /* STTypes.h */,
+				A77AF99521A664DA002D8537 /* BPMDetect.cpp */,
+				A77AF99621A664DA002D8537 /* BPMDetect.h */,
+				A77AF99721A664DA002D8537 /* mmx_optimized.cpp */,
+				A77AF99821A664DA002D8537 /* PeakFinder.h */,
+				A77AF99921A664DA002D8537 /* FIRFilter.cpp */,
+				A77AF99A21A664DA002D8537 /* SoundTouch.h */,
+				A77AF99B21A664DA002D8537 /* soundtouch_config.h */,
+				A77AF99C21A664DA002D8537 /* FIFOSamplePipe.h */,
+				A77AF99D21A664DA002D8537 /* FIFOSampleBuffer.cpp */,
+				A77AF99E21A664DA002D8537 /* sse_optimized.cpp */,
+				A77AF99F21A664DA002D8537 /* AAFilter.h */,
+				A77AF9A021A664DA002D8537 /* cpu_detect_x86.cpp */,
+				A77AF9A121A664DA002D8537 /* RateTransposer.h */,
+				A77AF9A221A664DA002D8537 /* PeakFinder.cpp */,
+				A77AF9A321A664DA002D8537 /* TDStretch.h */,
+				A77AF9A421A664DA002D8537 /* cpu_detect.h */,
+				A77AF9A521A664DA002D8537 /* AAFilter.cpp */,
+				A77AF9A621A664DA002D8537 /* SoundTouch.cpp */,
+			);
+			path = SoundTouch;
+			sourceTree = "<group>";
+		};
+		A77AF9A721A664DA002D8537 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9A821A664DA002D8537 /* AudioDecode */,
+				A77AF9B121A664DA002D8537 /* LYAudioRecorderUtil.h */,
+				A77AF9B221A664DA002D8537 /* LYAudioRecorderUtil.m */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		A77AF9A821A664DA002D8537 /* AudioDecode */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9A921A664DA002D8537 /* CAStreamBasicDescription.h */,
+				A77AF9AA21A664DA002D8537 /* AudioDecodeOperation.mm */,
+				A77AF9AB21A664DA002D8537 /* AudioDecodeOperation.h */,
+				A77AF9AC21A664DA002D8537 /* CAXException.cpp */,
+				A77AF9AD21A664DA002D8537 /* CAXException.h */,
+				A77AF9AE21A664DA002D8537 /* CADebugMacros.h */,
+				A77AF9AF21A664DA002D8537 /* CAStreamBasicDescription.cpp */,
+				A77AF9B021A664DA002D8537 /* CAMath.h */,
+			);
+			path = AudioDecode;
+			sourceTree = "<group>";
+		};
+		A77AF9B321A664DA002D8537 /* AudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9B421A664DA002D8537 /* LYAudioPlayerUtil.m */,
+				A77AF9B521A664DA002D8537 /* LYAudioPlayerUtil.h */,
+			);
+			path = AudioPlayer;
+			sourceTree = "<group>";
+		};
+		A77AF9B621A664DA002D8537 /* AudioConvert */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9B721A664DA002D8537 /* AudioDefine.h */,
+				A77AF9B821A664DA002D8537 /* AudioConvert.mm */,
+				A77AF9B921A664DA002D8537 /* AudioConvert.h */,
+			);
+			path = AudioConvert;
+			sourceTree = "<group>";
+		};
+		A77AF9BD21A664DA002D8537 /* AudioSoundTouch */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9BE21A664DA002D8537 /* AudioSoundTouchOperation.h */,
+				A77AF9BF21A664DA002D8537 /* AudioSoundTouchOperation.mm */,
+				A77AF9C021A664DA002D8537 /* WaveHeader.h */,
+				A77AF9C121A664DA002D8537 /* WaveHeader.cpp */,
+			);
+			path = AudioSoundTouch;
+			sourceTree = "<group>";
+		};
+		A77AF9C321A664DA002D8537 /* AudioEncode */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9C421A664DA002D8537 /* AudioToMp3 */,
+				A77AF9CA21A664DA002D8537 /* AudioToAmr */,
+			);
+			path = AudioEncode;
+			sourceTree = "<group>";
+		};
+		A77AF9C421A664DA002D8537 /* AudioToMp3 */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9C521A664DA002D8537 /* lame */,
+				A77AF9C821A664DA002D8537 /* AudioEncodeOperation.h */,
+				A77AF9C921A664DA002D8537 /* AudioEncodeOperation.m */,
+			);
+			path = AudioToMp3;
+			sourceTree = "<group>";
+		};
+		A77AF9C521A664DA002D8537 /* lame */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9C621A664DA002D8537 /* libmp3lame.a */,
+				A77AF9C721A664DA002D8537 /* lame.h */,
+			);
+			path = lame;
+			sourceTree = "<group>";
+		};
+		A77AF9CA21A664DA002D8537 /* AudioToAmr */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9CB21A664DA002D8537 /* opencore-amrwb */,
+				A77AF9CE21A664DA002D8537 /* lib */,
+				A77AF9D121A664DA002D8537 /* opencore-amrnb */,
+				A77AF9D421A664DA002D8537 /* amrwapper */,
+			);
+			path = AudioToAmr;
+			sourceTree = "<group>";
+		};
+		A77AF9CB21A664DA002D8537 /* opencore-amrwb */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9CC21A664DA002D8537 /* if_rom.h */,
+				A77AF9CD21A664DA002D8537 /* dec_if.h */,
+			);
+			path = "opencore-amrwb";
+			sourceTree = "<group>";
+		};
+		A77AF9CE21A664DA002D8537 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9CF21A664DA002D8537 /* libopencore-amrwb.a */,
+				A77AF9D021A664DA002D8537 /* libopencore-amrnb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A77AF9D121A664DA002D8537 /* opencore-amrnb */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9D221A664DA002D8537 /* interf_dec.h */,
+				A77AF9D321A664DA002D8537 /* interf_enc.h */,
+			);
+			path = "opencore-amrnb";
+			sourceTree = "<group>";
+		};
+		A77AF9D421A664DA002D8537 /* amrwapper */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF9D521A664DA002D8537 /* wav.mm */,
+				A77AF9D621A664DA002D8537 /* amrFileCodec.mm */,
+				A77AF9D721A664DA002D8537 /* amrFileCodec.h */,
+				A77AF9D821A664DA002D8537 /* wav.h */,
+			);
+			path = amrwapper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A77AF97421A66345002D8537 /* LYAudioConvertDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A77AF98B21A66347002D8537 /* Build configuration list for PBXNativeTarget "LYAudioConvertDemo" */;
+			buildPhases = (
+				A77AF97121A66345002D8537 /* Sources */,
+				A77AF97221A66345002D8537 /* Frameworks */,
+				A77AF97321A66345002D8537 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LYAudioConvertDemo;
+			productName = LYAudioConvertDemo;
+			productReference = A77AF97521A66345002D8537 /* LYAudioConvertDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A77AF96D21A66345002D8537 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Flame;
+				TargetAttributes = {
+					A77AF97421A66345002D8537 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = A77AF97021A66345002D8537 /* Build configuration list for PBXProject "LYAudioConvertDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A77AF96C21A66345002D8537;
+			productRefGroup = A77AF97621A66345002D8537 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A77AF97421A66345002D8537 /* LYAudioConvertDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A77AF97321A66345002D8537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A77AF98521A66347002D8537 /* LaunchScreen.storyboard in Resources */,
+				A77AF98221A66347002D8537 /* Assets.xcassets in Resources */,
+				A77AF98021A66345002D8537 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A77AF97121A66345002D8537 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A77AF9F321A664DA002D8537 /* wav.mm in Sources */,
+				A77AF9E221A664DA002D8537 /* PeakFinder.cpp in Sources */,
+				A77AF9F021A664DA002D8537 /* AudioEncodeOperation.m in Sources */,
+				A77AF9EB21A664DA002D8537 /* LYAudioManager.m in Sources */,
+				A77AF9E721A664DA002D8537 /* CAStreamBasicDescription.cpp in Sources */,
+				A77AF9DC21A664DA002D8537 /* BPMDetect.cpp in Sources */,
+				A77AF9F421A664DA002D8537 /* amrFileCodec.mm in Sources */,
+				A77AF9E121A664DA002D8537 /* cpu_detect_x86.cpp in Sources */,
+				A77AF9DB21A664DA002D8537 /* RateTransposer.cpp in Sources */,
+				A77AF97D21A66345002D8537 /* ViewController.m in Sources */,
+				A77AF9E321A664DA002D8537 /* AAFilter.cpp in Sources */,
+				A77AF9E921A664DA002D8537 /* LYAudioPlayerUtil.m in Sources */,
+				A77AF9E821A664DA002D8537 /* LYAudioRecorderUtil.m in Sources */,
+				A77AF9E021A664DA002D8537 /* sse_optimized.cpp in Sources */,
+				A77AF9DD21A664DA002D8537 /* mmx_optimized.cpp in Sources */,
+				A77AF9EE21A664DA002D8537 /* LYAudioConvertManager.m in Sources */,
+				A77AF98821A66347002D8537 /* main.m in Sources */,
+				A77AF9E421A664DA002D8537 /* SoundTouch.cpp in Sources */,
+				A77AF9DE21A664DA002D8537 /* FIRFilter.cpp in Sources */,
+				A77AF9ED21A664DA002D8537 /* WaveHeader.cpp in Sources */,
+				A77AF97A21A66345002D8537 /* AppDelegate.m in Sources */,
+				A77AF9E621A664DA002D8537 /* CAXException.cpp in Sources */,
+				A77AF9DF21A664DA002D8537 /* FIFOSampleBuffer.cpp in Sources */,
+				A77AF9E521A664DA002D8537 /* AudioDecodeOperation.mm in Sources */,
+				A77AF9EA21A664DA002D8537 /* AudioConvert.mm in Sources */,
+				A77AF9EC21A664DA002D8537 /* AudioSoundTouchOperation.mm in Sources */,
+				A77AF9DA21A664DA002D8537 /* TDStretch.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A77AF97E21A66345002D8537 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A77AF97F21A66345002D8537 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A77AF98321A66347002D8537 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A77AF98421A66347002D8537 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A77AF98921A66347002D8537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A77AF98A21A66347002D8537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A77AF98C21A66347002D8537 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYAudioConvertDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LYAudioConvert/AudioEncode/AudioToMp3/lame",
+					"$(PROJECT_DIR)/LYAudioConvert/AudioEncode/AudioToAmr/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flame.LYAudioConvertDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A77AF98D21A66347002D8537 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LYAudioConvertDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LYAudioConvert/AudioEncode/AudioToMp3/lame",
+					"$(PROJECT_DIR)/LYAudioConvert/AudioEncode/AudioToAmr/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flame.LYAudioConvertDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A77AF97021A66345002D8537 /* Build configuration list for PBXProject "LYAudioConvertDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A77AF98921A66347002D8537 /* Debug */,
+				A77AF98A21A66347002D8537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A77AF98B21A66347002D8537 /* Build configuration list for PBXNativeTarget "LYAudioConvertDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A77AF98C21A66347002D8537 /* Debug */,
+				A77AF98D21A66347002D8537 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A77AF96D21A66345002D8537 /* Project object */;
+}
